@@ -34,17 +34,22 @@ def cheak_name():
         else:# if the name is not the right lenghts it tells them that
             print("Please make your name bettween 2 and 10 letter")#prints how long there name nees to be
 
-#calls function
-#gets max_age
-#gets min_age
-#gets a while true loop
-#use try: so that if they enter letters it doesn't work
-#get them to enter their age 
-#cheack if the age is right (like if it is inbettween the max and min age vairble)
-#if it is bettween min and max age return age
-#if age isnt bettween min and max age it will print please enter your age bettween 10 and 60
-#use except valueerror so that if they dont enter an int then it doesnt crash 
-#prints and tells them to only enter numbers and whole numbers
+
+def cheak_age():#calls function
+    max_age = 60#gets max_age
+    min_age = 10#gets min_age
+
+    while (True):#gets a while true loop
+        try:#use try: so that if they enter letters it doesn't work
+            age = int(input("Please enter your age"))#get them to enter their age 
+            if age >= min_age and age <= max_age:#cheack if the age is right (like if it is inbettween the max and min age vairble)
+                return age #if it is bettween min and max age return age
+            else:
+                print("Please enter your age bettween 10 and 60")#if age isnt bettween min and max age it will print please enter your age bettween 10 and 60
+
+        except ValueError: #  use except valueerror so that if they dont enter an int then it doesnt crash 
+            print("Please only enter numbers and whole numbers")#prints and tells them to only enter numbers and whole numbers
+
 
 
 
