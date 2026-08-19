@@ -20,7 +20,7 @@ def list_maker():
 
 
 def cheak_name():
-    min_name = 2
+    min_name = 2#minimum name so it cant be under it
     max_name = 10
     """This function is to get the user to enter there name and to cheak that they have only entered letters and they it doesnt exede the boundrys of 1 to 10"""
    
@@ -32,13 +32,29 @@ def cheak_name():
         elif len(name) < max_name and len(name) > min_name: #cheaks if the names are the right lengths and if they are it returns them
             return name # returns name if right lenght
         else:# if the name is not the right lenghts it tells them that
-            print("Please make your name bettween 2 and 10 letter")
+            print("Please make your name bettween 2 and 10 letter")#prints how long there name nees to be
+
+#calls function
+#gets max_age
+#gets min_age
+#gets a while true loop
+#use try: so that if they enter letters it doesn't work
+#get them to enter their age 
+#cheack if the age is right (like if it is inbettween the max and min age vairble)
+#if it is bettween min and max age return age
+#if age isnt bettween min and max age it will print please enter your age bettween 10 and 60
+#use except valueerror so that if they dont enter an int then it doesnt crash 
+#prints and tells them to only enter numbers and whole numbers
+
+
+
 #------------main routine----------------------
 list_numbers = []
 if(__name__=="__main__"):
     # enter a name
     cheak_name() #to cheak there name is right
     # enter age
+    cheak_age()
     # make a list of number
     list_maker() # it will make a list of number bettween 1 and 100
     # intro to the game
