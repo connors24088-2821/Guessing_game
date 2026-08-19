@@ -38,7 +38,7 @@ def cheak_name():
 def cheak_age():#calls function
     max_age = 60#gets max_age
     min_age = 10#gets min_age
-
+    """This function is to get the user to enter their age and to check if they have entered it bettween the boundrys and that they have only entered letters"""
     while (True):#gets a while true loop
         try:#use try: so that if they enter letters it doesn't work
             age = int(input("Please enter your age"))#get them to enter their age 
