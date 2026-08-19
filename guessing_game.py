@@ -65,7 +65,7 @@ if(__name__=="__main__"):
     # intro to the game
     #computer rand number
     rand_numbers = random.choice(list_maker())
-    # ask user to guess 
+    cheak_guess()#use a function to check the guess
     # give higher or lower
     # count amount of guesses
     # give the stats how it took to guess
