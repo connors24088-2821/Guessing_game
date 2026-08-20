@@ -21,7 +21,7 @@ def list_maker():
 
 def cheak_name():
     min_name = 2#minimum name so it cant be under it
-    max_name = 10
+    max_name = 10#maximun name so it can't be over
     """This function is to get the user to enter there name and to cheak that they have only entered letters and they it doesnt exede the boundrys of 1 to 10"""
    
     while True:# make a while loop so that if what the user enter is wrong it makes them re enter it
@@ -51,7 +51,25 @@ def cheak_age():#calls function
             print("Please only enter numbers and whole numbers")#prints and tells them to only enter numbers and whole numbers
 
 
+def cheack_guess():#calls function
+    max_guess = 100#gets maximun guess
+    min_guess = 1#gets minimun guess
+    """This function is to get the user to enter their guess and to check if they have entered it bettween the boundrys and that they have only entered letters"""
+    #gets a while true loop
+        #use try: so that if they enter letters it doesn't work
+           #get them to enter their guess
+            #cheack if the guess is right
+            #tells them if it was right
+            #tells them how many guesses it tool
+            #break to get out of the loop
+             #if the guess isnt bettween min and max guess it will print please enter your guess bettween 1 and 100
+    #if it is bettween min and max guess either tells them that it was to high or to low in an elif or else statement
+    #adds guesses on
+    #except valueerror to insure that the code doesnt crash if the suer enters letters
+    #tells them to only enter there guess in whole numbers
+             
 
+       
 
 #------------main routine----------------------
 list_numbers = []
