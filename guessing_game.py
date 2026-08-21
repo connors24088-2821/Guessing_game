@@ -51,23 +51,30 @@ def cheak_age():#calls function
             print("Please only enter numbers and whole numbers")#prints and tells them to only enter numbers and whole numbers
 
 
-def cheack_guess():#calls function
+def cheack_guess(rand_numbers):#calls function
     max_guess = 100#gets maximun guess
     min_guess = 1#gets minimun guess
+    guesses = 0 
     """This function is to get the user to enter their guess and to check if they have entered it bettween the boundrys and that they have only entered letters"""
-    #gets a while true loop
-        #use try: so that if they enter letters it doesn't work
-           #get them to enter their guess
-            #cheack if the guess is right
-            #tells them if it was right
-            #tells them how many guesses it tool
-            #break to get out of the loop
-             #if the guess isnt bettween min and max guess it will print please enter your guess bettween 1 and 100
-    #if it is bettween min and max guess either tells them that it was to high or to low in an elif or else statement
-    #adds guesses on
-    #except valueerror to insure that the code doesnt crash if the suer enters letters
-    #tells them to only enter there guess in whole numbers
-             
+    while True:#gets a while true loop
+        try:#use try: so that if they enter letters it doesn't work
+            guess = int(input("Enter your guess bettween 1 to 100"))#get them to enter their guess
+            if guess == rand_numbers: #cheack if the guess is right
+                print("You guessed correctly")#tells them if it was right
+                print(f"It took you {guesses} to guess corectly")#tells them how many guesses it tool
+                break #break to get out of the loop
+            elif guess < min_guess or guess > max_guess:     #if the guess isnt bettween min and max guess it will print please enter your guess bettween 1 and 100
+                            print("Please make your guess between 1 and 100") 
+            elif(guess > rand_numbers):#if it is bettween min and max guess either tells them that it was to high or to low in an elif or else statement
+                print("Your guess was too high")
+            else:
+                print("Your guess was too low")
+            guesses += 1 #adds guesses on
+        except ValueError: #except valueerror to insure that the code doesnt crash if the suer enters letters
+             print("Please only enter whole numbers")   #tells them to only enter there guess in whole numbers
+                          
+   
+ 
 
        
 
@@ -83,7 +90,7 @@ if(__name__=="__main__"):
     # intro to the game
     #computer rand number
     rand_numbers = random.choice(list_maker())
-    cheak_guess()#use a function to check the guess
+    cheack_guess(rand_numbers)#use a function to check the guess
     # give higher or lower
     # count amount of guesses
     # give the stats how it took to guess
