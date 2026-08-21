@@ -29,7 +29,7 @@ def cheak_name():
             
         if not name.isalpha():# makes sure that the name only uses the alphabet
             print("Please only enter letters")
-        elif len(name) < max_name and len(name) > min_name: #cheaks if the names are the right lengths and if they are it returns them
+        elif len(name) <= max_name and len(name) >= min_name: #cheaks if the names are the right lengths and if they are it returns them
             return name # returns name if right lenght
         else:# if the name is not the right lenghts it tells them that
             print("Please make your name bettween 2 and 10 letter")#prints how long there name nees to be
